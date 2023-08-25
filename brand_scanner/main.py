@@ -3,6 +3,7 @@ from llama_index import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms import OpenAI
 import openai
 from llama_index import SimpleDirectoryReader
+from llama_hub.web.sitemap.base import SitemapReader
 import os
 
 # set openai api key and header
@@ -19,8 +20,8 @@ if 'messages' not in st.session_state.keys():
 @st.cache_resource(show_spinner=False)
 def load_data():
     with st.spinner(text="Loading and indexing the GMMB pages – hang tight! This should take 1-2 minutes."):
-        reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
-        docs = reader.load_data()
+        reader = SitemapReader()
+        docs = reader.load_data(sitemap_url='https://www.gmmb.com/sitemap_index.xml')
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are a sales expert on GMMB services and offering and your job is to answer content and sales questions. Assume that all questions are related to GMMB services, work, and culture. Keep your answers in the tone of GMMB and based on facts – do not hallucinate features."))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
