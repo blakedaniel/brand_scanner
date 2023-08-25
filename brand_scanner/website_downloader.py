@@ -61,4 +61,4 @@ def save_pages(homepage_url:str, max_pages:int=None):
             markdown = f'# {soup.title.string}\n\n{text}'
             file.write(markdown)
 
-save_pages('https://www.gmmb.com', 50)
+save_pages('https://www.gmmb.com', 150)
