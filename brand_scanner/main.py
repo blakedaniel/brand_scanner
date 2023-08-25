@@ -2,10 +2,12 @@ import streamlit as st
 from llama_index import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms import OpenAI
 import openai
-from llama_index import SimpleDirectoryReader
+from llama_index import download_loader
 from llama_hub.web.sitemap.base import SitemapReader
 import os
 from urllib.request import Request, urlopen
+
+SitemapReader = download_loader("SitemapReader")
 
 class SitemapeReaderAgent(SitemapReader):
     def _load_sitemap(self, sitemap_url: str) -> str:
