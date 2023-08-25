@@ -13,15 +13,15 @@ st.header('Chat with an Online Brand')
 if 'messages' not in st.session_state.keys():
     st.session_state.messages = [
         {'role': 'brand strategist',
-         'content': 'ask me a brand related question about Mighty Good!'}
+         'content': 'ask me a brand related question about GMMB!'}
     ]
 
 @st.cache_resource(show_spinner=False)
 def load_data():
-    with st.spinner(text="Loading and indexing the Mighty Good pages – hang tight! This should take 1-2 minutes."):
+    with st.spinner(text="Loading and indexing the GMMB pages – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are a sales expert on Mighty Good services and offering and your job is to answer content and sales questions. Assume that all questions are related to Might Good services and content. Keep your answers technical and based on facts – do not hallucinate features."))
+        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are a sales expert on GMMB services and offering and your job is to answer content and sales questions. Assume that all questions are related to GMMB services and content. Keep your answers technical and based on facts – do not hallucinate features."))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 
