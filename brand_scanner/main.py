@@ -3,7 +3,7 @@ from llama_index import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms import OpenAI
 import openai
 from llama_index import SimpleDirectoryReader
-from website_downloader import save_pages
+import os
 
 # set openai api key and header
 openai.api_key = st.secrets.openai_key
@@ -18,8 +18,10 @@ if 'messages' not in st.session_state.keys():
 
 @st.cache_resource(show_spinner=False)
 def load_data():
+    directory = os.path.dirname(os.getcwd())
+    directory = os.path.join(directory, 'data')
     with st.spinner(text="Loading and indexing the GMMB pages – hang tight! This should take 1-2 minutes."):
-        reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
+        reader = SimpleDirectoryReader(input_dir=directory, recursive=True)
         docs = reader.load_data()
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are a sales expert on GMMB services and offering and your job is to answer content and sales questions. Assume that all questions are related to GMMB services and content. Keep your answers technical and based on facts – do not hallucinate features."))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
