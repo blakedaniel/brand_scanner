@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "brand-scanner"
+version = "0.1.0"
+description = ""
+authors = ["blakedaniel <blake.vanfleteren@gmail.com>"]
+readme = "README.md"
+packages = [{include = "brand_scanner"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
