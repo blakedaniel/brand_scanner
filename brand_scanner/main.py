@@ -12,14 +12,12 @@ st.header('Chat with an Online Brand')
 # initialize messages with starting message if new conversation
 if 'messages' not in st.session_state.keys():
     st.session_state.messages = [
-        {'role': 'brand strategist',
+        {'role': 'assistant',
          'content': 'ask me a brand related question about GMMB!'}
     ]
 
 @st.cache_resource(show_spinner=False)
 def load_data():
-    directory = os.path.dirname(os.getcwd())
-    directory = os.path.join(directory, 'data')
     with st.spinner(text="Loading and indexing the GMMB pages – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()

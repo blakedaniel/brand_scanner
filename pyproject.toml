@@ -12,7 +12,6 @@ streamlit = "^1.26.0"
 openai = "^0.27.9"
 llama-index = "^0.8.9"
 nltk = "^3.8.1"
-scrapy = "^2.10.0"
 
 
 [build-system]
