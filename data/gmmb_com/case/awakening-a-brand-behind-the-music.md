@@ -1,0 +1,23 @@
+# Awakening a Brand Behind the Music - GMMB: Cause the Effect
+
+
+Awakening a Brand Behind the Music
+April 7, 2023
+Awakening a Brand Behind the Music
+All Case Studies
+ 
+Awakening a Brand Behind the Music 
+
+Choral Arts
+
+Brand Strategy, Digital Strategy, Media Relations, Production 
+Choral Arts is a premier chorus in Washington, D.C. that has been an icon in the region’s cultural scene since 1965. To raise their profile in an increasingly competitive space, resonate with new and existing audiences, and generate interest and engagement for their performance season, Choral Arts turned to GMMB to reveal the emotional core of their brand. GMMB conducted qualitative and quantitative research that uncovered fundamental truths about Choral Arts — the transformative quality of the music, the sense of community they create, and the harmony, togetherness, and beauty of their craft. 
+Using those learnings, we shaped the brand to cut through the shuffle of abundant concerts and ensembles and connect with the idea that choral singing is an elemental human experience, a sound with the power to “Awaken Your World.” GMMB created a new modern logo, fundraising and concert materials; designed the Choral Arts website; and produced a brand video. 
+ 
+ 
+ 
+ 
+The new brand materials accompanied a tailored launch strategy that ushered in the new brand, during the height of the COVID-19 pandemic, with a virtual choral performance with paid media promotion, including a full-page Washingtonian ad.  
+The performance drew thousands of viewers, invigorated relationships with existing audiences, piqued the interest of new audiences, and generated buzz for the next season and seasons to come. Since the unveiling, GMMB has continued to help Choral Arts build the brand into their virtual and in-person events including concerts and gala. 
+ 
+ 
