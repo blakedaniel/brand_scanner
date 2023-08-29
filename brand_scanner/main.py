@@ -32,7 +32,7 @@ def load_data():
 
 index = load_data()
 
-chat_engine = index.as_chat_engine(chat_mode="react", verbose=True)
+chat_engine = index.as_chat_engine(chat_mode="condense_question", verbose=True)
 
 if prompt := st.chat_input("Your GMMB question"): # Prompt for user input and save to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
