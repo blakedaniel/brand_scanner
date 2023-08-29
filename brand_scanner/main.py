@@ -25,7 +25,7 @@ def load_data():
                  GMMB. Keep your answers friendly, in the tone of the GMMB and based on \
                     facts – do not hallucinate features."
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo",
-                                                                  temperature=0.5, 
+                                                                  temperature=1.3, 
                                                                   system_prompt=prompt))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
