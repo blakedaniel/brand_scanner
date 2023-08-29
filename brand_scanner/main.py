@@ -22,7 +22,7 @@ def load_data():
         docs = reader.load_data()
         prompt = "You are an expert on the company GMMB and your job is to answer \
             questions about the company. Assume that all questions are related to the \
-                company GMMB. Keep your answers straightforward and based on \
+                company GMMB. Keep your answers friendly, in the tone of the GMMB website and based on \
                     facts – do not hallucinate features."
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo",
                                                                   temperature=0.5, 
