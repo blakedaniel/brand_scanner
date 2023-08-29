@@ -20,7 +20,13 @@ def load_data():
     with st.spinner(text="Loading and indexing the GMMB website – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on the company GMMB and your job is to answer questions about the company. Assume that all questions are related to the company GMMB. Keep your answers within the GMMB tone and based on facts – do not hallucinate features."))
+        prompt = "You are an expert on the company GMMB and your job is to answer \
+            questions about the company. Assume that all questions are related to the \
+                company GMMB. Keep your answers straightforward and based on \
+                    facts – do not hallucinate features."
+        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo",
+                                                                  temperature=0.5, 
+                                                                  system_prompt=prompt))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 
