@@ -12,7 +12,7 @@
 
 Allie Babin
 ===========
-
+Allie Babin is a Senior Copywriter at GMMB.
 
 ###### Senior Copywriter
 

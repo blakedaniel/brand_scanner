@@ -12,7 +12,7 @@
 
 Becky Nawrocki
 ==============
-
+Becky Nawrocki is a Senior Project Manager at GMMB.
 
 ###### Senior Project Manager
 

@@ -12,7 +12,7 @@
 
 Amanda Adams
 ============
-
+Amanda Adams is a Senior Staff Accountant at GMMB.
 
 ###### Senior Staff Accountant
 

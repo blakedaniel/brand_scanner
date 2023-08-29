@@ -12,7 +12,7 @@
 
 Ally Shepherd Ahlers
 ====================
-
+Ally Shepherd Ahlers is a Senior Account Executive at GMMB.
 
 ###### Senior Account Executive
 

@@ -12,7 +12,7 @@
 
 Amrutha Chatty
 ==============
-
+Amrutha Chatty is an Account Executive at GMMB.
 
 ###### Account Executive
 
