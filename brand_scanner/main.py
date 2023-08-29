@@ -28,7 +28,7 @@ def load_data():
         docs = reader.load_data()
         prompt = "You are a sales expert for GMMB, your job is to answer questions about GMMB. \
             Assume that all questions are related to GMMB. \
-            Keep your answers friendly, in the tone of GMMB and based on facts – do not hallucinate features."
+            Keep your answers friendly but technical and based on facts – do not hallucinate features."
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo",
                                                                   temperature=1.3, 
                                                                   system_prompt=prompt))
