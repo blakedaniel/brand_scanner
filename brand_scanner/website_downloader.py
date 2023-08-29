@@ -23,7 +23,7 @@ def get_page_urls(url, max_pages:(int | None)):
                 return urls
     return urls
 
-def create_file_path(url:str) -> None:
+def create_file_path(url:str, output_type:str='.md') -> None:
     path_comps = url.split('/')
     if path_comps[-1] == '':
         path_comps.pop()
@@ -34,7 +34,7 @@ def create_file_path(url:str) -> None:
         directory = os.path.join(directory, comp)
         if not os.path.exists(directory):
             os.makedirs(directory)
-    file_name = path_comps[-1] + '.md'
+    file_name = path_comps[-1] + output_type
     file_path = os.path.join(directory, file_name)
     return file_path
 
