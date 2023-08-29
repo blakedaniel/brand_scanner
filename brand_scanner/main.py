@@ -20,9 +20,9 @@ def load_data():
     with st.spinner(text="Loading and indexing the GMMB website – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
         docs = reader.load_data()
-        prompt = "You are an expert on the company GMMB and your job is to answer \
-            questions about the company. Assume that all questions are related to the \
-                company GMMB. Keep your answers friendly, in the tone of the GMMB website and based on \
+        prompt = "You are an expert on the company GMMB, their clients, their work, and their employees and your job is to answer \
+            questions about the company, their work, and their employees. Assume that all questions are related to \
+                 GMMB. Keep your answers friendly, in the tone of the GMMB and based on \
                     facts – do not hallucinate features."
         service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo",
                                                                   temperature=0.5, 
