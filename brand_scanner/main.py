@@ -17,8 +17,6 @@ if 'messages' not in st.session_state.keys():
 
 def set_urls(reader, docs):
     url_idx = len(reader.input_dir.parts)
-    print(url_idx)
-    print(docs)
     for doc in docs:
         file_name = doc.doc_id
         url = file_name.split('/')[url_idx:]
@@ -46,6 +44,7 @@ def load_data():
             reader = SimpleDirectoryReader(input_dir=data_dir, recursive=True, 
                                            filename_as_id=True)
         docs = reader.load_data()
+        print(reader)
         set_urls(reader, docs)
         prompt = "You are a sales expert for GMMB, your job is to answer questions about GMMB. \
             Assume that all questions are related to GMMB. \
