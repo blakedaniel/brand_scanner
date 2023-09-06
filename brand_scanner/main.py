@@ -19,6 +19,7 @@ def set_urls(reader, docs):
     url_idx = len(reader.input_dir.parts)
     for doc in docs:
         file_name = doc.doc_id
+        print(file_name)
         url = file_name.split('/')[url_idx:]
         last = url[-1].split('.')
         last = last[0]
@@ -38,7 +39,7 @@ def load_data():
         
         try:
             data_dir = "./data"
-            reader = SimpleDirectoryReader(input_dir=data_dir, recursive=True)
+            reader = SimpleDirectoryReader(iDnput_dir=data_dir, recursive=True)
         except ValueError:
             data_dir = '/Users/blakevanfleteren/Programs/GitHub/brand_scanner/data'
             reader = SimpleDirectoryReader(input_dir=data_dir, recursive=True, 
