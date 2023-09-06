@@ -16,10 +16,10 @@ if 'messages' not in st.session_state.keys():
     ]
 
 def set_urls(reader, docs):
+    print(reader.input_dir)
     url_idx = len(reader.input_dir.parts)
     for doc in docs:
         file_name = doc.doc_id
-        print(file_name)
         url = file_name.split('/')[url_idx:]
         last = url[-1].split('.')
         last = last[0]
