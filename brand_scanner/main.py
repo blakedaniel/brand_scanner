@@ -4,27 +4,6 @@ from llama_index.llms import OpenAI
 import openai
 from llama_index import SimpleDirectoryReader
 
-# from llama_index import GPTVectorStoreIndex
-# from llama_index.evaluation import BinaryResponseEvaluator
-
-# # build service context
-# llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-4"))
-# service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
-
-# # build index
-# ...
-# vector_index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
-
-# # define evaluator
-# evaluator = BinaryResponseEvaluator(service_context=service_context)
-
-# # query index
-# query_engine = vector_index.as_query_engine()
-# response = query_engine.query("What battles took place in New York City in the American Revolution?")
-# eval_result = evaluator.evaluate(response)
-# print(str(eval_result))
-
-
 # set openai api key and header
 openai.api_key = st.secrets.openai_key
 st.header('Chat with a GMMB expert!')
@@ -37,9 +16,11 @@ if 'messages' not in st.session_state.keys():
     ]
 
 def set_urls(reader, docs):
+    sys.stdout.flush()
     url_idx = len(reader.input_dir.parts)
     for doc in docs:
         file_name = doc.doc_id
+        print(file_name)
         url = file_name.split('/')[url_idx:]
         last = url[-1].split('.')
         last = last[0]
