@@ -39,7 +39,7 @@ def load_data():
         
         try:
             data_dir = "./data"
-            reader = SimpleDirectoryReader(iDnput_dir=data_dir, recursive=True)
+            reader = SimpleDirectoryReader(input_dir=data_dir, recursive=True)
         except ValueError:
             data_dir = '/Users/blakevanfleteren/Programs/GitHub/brand_scanner/data'
             reader = SimpleDirectoryReader(input_dir=data_dir, recursive=True, 
